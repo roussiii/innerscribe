@@ -32,6 +32,8 @@ gem "devise"
 
 gem "openai"
 
+gem "webpacker"
+
 gem 'dotenv-rails', groups: [:development, :test]
 
 
