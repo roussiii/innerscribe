@@ -23,7 +23,7 @@ class JournalsController < ApplicationController
   def create
     # @journal = Journal.new(journal_params) //initial code replaced by @journal = current_user.journals.build(journal_params)
     @journal = current_user.journals.build(journal_params)
-
+    raise
     respond_to do |format|
       if @journal.save
         format.html { redirect_to journal_url(@journal), notice: "Journal was successfully created." }
