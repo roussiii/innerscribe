@@ -12,3 +12,28 @@
 </div>
 
 <%= link_to "New journal", new_journal_path %>
+
+<br>
+<br>
+<br>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">InnerScribe</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "Journal Entry", new_journal_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "AI Counselor", new_counselor_interaction_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
