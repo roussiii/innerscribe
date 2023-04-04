@@ -1,0 +1,10 @@
+<%= form_with(model: @counselor_interaction, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :input, "Your Message:" %>
+    <%= form.text_area :input %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Get AI Response" %>
+  </div>
+<% end %>
