@@ -32,7 +32,9 @@ gem "devise"
 
 gem "openai"
 
-gem "webpacker"
+gem 'sassc-rails'
+
+gem "will_paginate"
 
 gem 'dotenv-rails', groups: [:development, :test]
 

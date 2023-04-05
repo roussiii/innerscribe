@@ -16,6 +16,8 @@
 
  /* Set primary color variables */
 /* Global styles */
+@import "components/_journal_index.scss"
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -61,6 +63,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  /* white-space: nowrap; */
 }
 
 nav li {

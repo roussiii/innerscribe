@@ -3,6 +3,7 @@ class JournalsController < ApplicationController
 
   # GET /journals or /journals.json
   def index
+    # @journals = Journal.paginate(page: params[:page], per_page: 10)
     @journals = Journal.all
   end
 
@@ -23,7 +24,6 @@ class JournalsController < ApplicationController
   def create
     # @journal = Journal.new(journal_params) //initial code replaced by @journal = current_user.journals.build(journal_params)
     @journal = current_user.journals.build(journal_params)
-    raise
     respond_to do |format|
       if @journal.save
         format.html { redirect_to journal_url(@journal), notice: "Journal was successfully created." }
@@ -66,6 +66,6 @@ class JournalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def journal_params
-      params.require(:journal).permit(:title, :content, :user_id)
+      params.require(:journal).permit(:title, :content)
     end
 end

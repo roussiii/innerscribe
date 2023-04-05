@@ -2,7 +2,7 @@
   <h1>InnerScribe</h1>
   <nav>
     <ul>
-      <li><%= link_to 'Journal', new_journal_path %></li>
+      <li><%= link_to 'Journal', journals_path %></li>
       <li><%= link_to 'Counselor', new_counselor_interaction_path %></li>
       <% if user_signed_in? %>
         <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>

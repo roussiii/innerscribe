@@ -1,17 +1,14 @@
-<div id="<%= dom_id journal %>">
-  <p>
-    <strong>Title:</strong>
-    <%= journal.title %>
-  </p>
-
-  <p>
-    <strong>Content:</strong>
-    <%= journal.content %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= journal.user_id %>
-  </p>
-
+<div id="<%= dom_id journal %>" class="journal-card">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-date">
+        <% date = Journal.first.created_at %>
+        <p class="text-muted"><%= formatted_date = date.strftime("%B %e") %></p>
+      </div>
+      <h5 class="card-title"><strong>Title:</strong><%= journal.title %></h5>
+      <p class="card-text"><strong>Content:</strong><%= journal.content %></p>
+      <small class="text-muted"><strong>User:</strong><%= journal.user_id %></small>
+      <p><%= link_to "Show this journal", journal %></p>
+    </div>
+  </div>
 </div>

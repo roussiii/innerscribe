@@ -1,14 +1,19 @@
 <div class="container">
-  <div class="column">
-    <div class="jn-title">
-      <h1>New journal</h1>
-    </div>
-    <div class="jn-form">
-      <%= render "form", journal: @journal %>
-    </div>
-    <div>
-      <%= link_to "Back to journals", journals_path %>
-    </div>
-      <%= link_to "Home", root_path %>
+  <h1>New journal</h1>
+  <%= render "form", journal: @journal %>
+  <div>
+    <%= link_to "Back to journals", journals_path %>
   </div>
+    <%= link_to "Home", root_path %>
 </div>
+
+<!-- <% if @journal.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@journal.errors.count, "error") %> prohibited this journal from being saved:</h2>
+    <ul>
+      <% @journal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %> -->
